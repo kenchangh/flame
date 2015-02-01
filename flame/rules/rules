@@ -1,0 +1,5 @@
+{% set rule_file = 'rules.'+filetype %}
+
+{% import rule_file as rules %}
+
+{{ rules[op](item, url, obj) }}
