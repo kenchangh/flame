@@ -4,7 +4,7 @@ require 'net/http'
 
 {% macro get(item, url, obj={}) -%}
 def get_{{ item }}
-  url = URI.parse({{ url }})
+  url = URI.parse('{{ url }}')
   req = Net::HTTP::Get.new(url.to_s)
   res = Net::HTTP.start(url.host, url.port) {|http|
     http.request(req)
@@ -16,7 +16,7 @@ end
 
 {% macro post(item, url, obj) -%}
 def post
-  url = URI.parse({{ url }})
+  url = URI.parse('{{ url }}')
   headers = {'Content-Type' =>'application/json'}
   req = Net::HTTP::Post.new(url, initheader = headers)
   req.body = {{ obj }}
