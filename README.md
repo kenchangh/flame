@@ -35,7 +35,7 @@ Ruby:
 
 ```ruby
 def get_comments
-  url = URI.parse(http://example.com/comments)
+  url = URI.parse('http://example.com/comments')
   req = Net::HTTP::Get.new(url.to_s)
   res = Net::HTTP.start(url.host, url.port) {|http|
     http.request(req)

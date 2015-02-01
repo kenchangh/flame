@@ -17,7 +17,7 @@ end
 {% macro post(item, url, obj) -%}
 def post
   url = URI.parse('{{ url }}')
-  headers = {'Content-Type' =>'application/json'}
+  headers = {'Content-Type'=>'application/json'}
   req = Net::HTTP::Post.new(url, initheader = headers)
   req.body = {{ obj }}
   res = Net::HTTP.new(url.host, url.port).start {|http|
