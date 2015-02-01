@@ -9,7 +9,7 @@ Use this:
 
 To get this:
 
-```
+```python
 def get_comments():
     api_url = 'http://example.com/comments'
     req = requests.get(api_url)
@@ -21,7 +21,7 @@ Then just convert `py` to `js` or `rb`.
 
 Client-side JavaScript with jQuery:
 
-```
+```javascript
 function getComments(cb) {
   var apiUrl = 'http://example.com/comments';
   $.get(apiUrl, function(json) {
@@ -33,7 +33,7 @@ function getComments(cb) {
 
 Ruby:
 
-```
+```ruby
 def get_comments
   url = URI.parse(http://example.com/comments)
   req = Net::HTTP::Get.new(url.to_s)
@@ -48,5 +48,5 @@ end
 Writing rules
 -------------
 
-Refer to the existing rules for Python, JavaScript and Ruby. Write it in (Jinja2)[http://jinja.pocoo.org/docs/dev/].
+Refer to the existing rules for Python, JavaScript and Ruby. Write it in [Jinja2](http://jinja.pocoo.org/docs/dev/).
 
